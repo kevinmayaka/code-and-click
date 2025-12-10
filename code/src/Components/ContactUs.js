@@ -1,7 +1,7 @@
 import React, {useState} from 'react';
- import './ContactUs.css';
+import './ContactUs.css';
 
- export default function ContactUs() {
+export default function ContactUs() {
 
     const [isFormVisible, setIsFormVisible] = useState(false);
     const [formData, setFormData] = useState({
@@ -13,6 +13,9 @@ import React, {useState} from 'react';
     const handleButtonClick = () => {
         setIsFormVisible(!isFormVisible);
     };
+    const handleCloseForm = () => {
+        setIsFormVisible(false);
+    }
     // handler to update form data
     const handleInputChange =(e) => {
         const {name, value} =e.target;
@@ -34,12 +37,13 @@ import React, {useState} from 'react';
             <div className="contact-us-content">
                 <p>Want more customers, Clients and Sales than you 
                     could handle? Reach out to us today!
-                </p>
-                {!isFormVisible && (
-                <button className="contact-us-button" onClick={handleButtonClick}>Get in Touch</button>
-                )}
-                {isFormVisible &&(
-                    <div className='form-container'>
+                </p>        
+                <button className="contact-us-button" onClick={handleButtonClick}>Get in Touch</button>                
+            </div>
+            {isFormVisible &&(
+                    <div className='modal-overlay' onClick={handleCloseForm}>
+                        <div className='form-container' onClick={(e) => e.stopPropagation()}>
+                            <button className='close-btn' onClick={handleCloseForm}>X</button>                        
                         <h2>Tell us about your business</h2>
                         <form onSubmit={handleSubmit}>
                             <div>
@@ -78,8 +82,8 @@ import React, {useState} from 'react';
                             <button type='submit'>Submit Data</button>
                         </form>
                     </div>
-                )}
-            </div>
+                </div>
+                )}            
          </div>   
     );
  }
