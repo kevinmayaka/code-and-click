@@ -1,0 +1,158 @@
+/* Footer Styles */
+footer {
+    background-color: #282c34;
+    color: white;
+    padding: 40px 0 20px 0;
+    font-family: 'Arial', sans-serif;
+}
+
+.footer {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 30px;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+/* Logo Section */
+.logo-section {
+    text-align: center;
+    padding: 0 20px;
+}
+
+.logo-section img {
+    width: 80px;
+    height: 80px;
+    margin-bottom: 15px;
+    border-radius: 50%;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.logo-section h3 {
+    margin: 0 0 10px 0;
+    font-size: 1.4em;
+    font-weight: bold;
+    color: #61dafb;
+}
+
+.logo-section p {
+    margin: 0;
+    font-size: 0.95em;
+    color: #cccccc;
+    line-height: 1.4;
+}
+
+/* Solutions Section */
+.solutions-section h4 {
+    margin-bottom: 20px;
+    font-size: 1.2em;
+    font-weight: bold;
+    color: #61dafb;
+    border-bottom: 2px solid #61dafb;
+    padding-bottom: 8px;
+}
+
+.solutions-section ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.solutions-section li {
+    margin-bottom: 12px;
+}
+
+.solutions-section a {
+    color: #ffffff;
+    text-decoration: none;
+    font-size: 1em;
+    transition: color 0.3s ease;
+    display: inline-block;
+}
+
+.solutions-section a:hover {
+    color: #61dafb;
+    transform: translateX(5px);
+}
+
+/* Contact Information Section */
+.contact-info-section h4 {
+    margin-bottom: 20px;
+    font-size: 1.2em;
+    font-weight: bold;
+    color: #61dafb;
+    border-bottom: 2px solid #61dafb;
+    padding-bottom: 8px;
+}
+
+.contact-info-content {
+    font-size: 0.95em;
+}
+
+.contact-info-content p {
+    margin: 8px 0;
+    line-height: 1.5;
+}
+
+.contact-info-content strong {
+    color: #61dafb;
+    font-weight: bold;
+}
+
+/* Copyright Section */
+.copyright-section {
+    text-align: center;
+    margin-top: 30px;
+    padding-top: 20px;
+    border-top: 1px solid #444444;
+    font-size: 0.85em;
+    color: #aaaaaa;
+    max-width: 1200px;
+    margin-left: auto;
+    margin-right: auto;
+    padding-left: 20px;
+    padding-right: 20px;
+}
+
+.copyright-section p {
+    margin: 0;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .footer {
+        grid-template-columns: 1fr;
+        gap: 25px;
+        padding: 0 15px;
+    }
+
+    .logo-section,
+    .solutions-section,
+    .contact-info-section {
+        text-align: center;
+    }
+
+    .solutions-section a:hover {
+        transform: none;
+    }
+}
+
+@media (max-width: 480px) {
+    footer {
+        padding: 30px 0 15px 0;
+    }
+
+    .footer {
+        gap: 20px;
+    }
+
+    .logo-section img {
+        width: 60px;
+        height: 60px;
+    }
+
+    .logo-section h3 {
+        font-size: 1.2em;
+    }
+}
