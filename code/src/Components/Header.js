@@ -1,5 +1,6 @@
 import React from "react";
 import './Header.css';
+import logo from '../assets/cnclogo.jpg';
 
 export default function Header() {
   const handleNavClick = (sectionId) => {
@@ -13,7 +14,7 @@ export default function Header() {
     <header className="header">
       <div className="header-container">
         <div className="logo">
-          <img src="https://codetheweb.blog/assets/img/icon2.png" alt="Logo" />
+          <img src={logo} alt="Code and Click Africa Logo" />
         </div>
         <nav className="nav">
           <ul>
