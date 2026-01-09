@@ -5,15 +5,17 @@ import Services from './Components/Services';
 import ContactUs from './Components/ContactUs';
 import Faqs from './Components/Faqs';
 import Footer from './Components/Footer';
+import Header from './Components/Header';
 
 function App() {
   return (
     <div className="App">
-        <Home />
-        <Services />
-        <ContactUs />
-        <Faqs />
-        <Footer />
+      <Header />
+      <Home />
+      <Services />
+      <ContactUs />
+      <Faqs />
+      <Footer />
     </div>
   );
 }

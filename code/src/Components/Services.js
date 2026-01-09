@@ -22,7 +22,7 @@ export default function Services() {
     },
     ]
   return (
-    <div className="services-container">
+    <div className="services-container" id="services">
       <h2 className="services-title">Our Services</h2>
       <div className="services-grid">
         {ServicesData.map((service, index) => (

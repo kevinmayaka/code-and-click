@@ -32,7 +32,7 @@ export default function ContactUs() {
         setIsFormVisible(false);
     }
     return (
-         <div className="contact-us-container">
+         <div className="contact-us-container" id="contact">
             <h1 className='contact-us-header'>Contact Us</h1>
             <div className="contact-us-content">
                 <p>Want more customers, Clients and Sales than you 

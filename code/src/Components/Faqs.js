@@ -42,7 +42,7 @@ export default function Faqs() {
   };
 
   return (
-    <div className="FAQs-Component">
+    <div className="FAQs-Component" id="faqs">
       <h2>Frequently Asked Questions</h2>
 
       {faqs.map((faq, index) => (
