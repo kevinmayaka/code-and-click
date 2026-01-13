@@ -1,24 +1,27 @@
 import React from "react";
 import './Services.css';
+import webDesignImg from '../assets/webdev.jpg';
+import digitalMarketingImg from '../assets/marketing.jpg';
+import socialMediaImg from '../assets/socialmedia.jpg';
 
 export default function Services() {
     const ServicesData = [
         {
             title : "Web Design and Development",
             description : "We create stunning and responsive websites tailored to your needs.",
-            icon : "🌐"
+            image : webDesignImg
         },
         {
       title: "Digital Marketing",
       description:
         "Reach more customers through SEO, Google Ads, and targeted digital marketing strategies.",
-      icon: "📈",
+      image: digitalMarketingImg,
     },
     {
       title: "Social Media Management",
       description:
         "Grow your brand with professional social media management and content creation.",
-      icon: "📱",
+      image: socialMediaImg,
     },
     ]
   return (
@@ -27,12 +30,14 @@ export default function Services() {
       <div className="services-grid">
         {ServicesData.map((service, index) => (
           <div className="service-card" key={index}>
-            <div className="service-icon">{service.icon}</div>
+            <div className="service-image">
+              <img src={service.image} alt={service.title} />
+            </div>
             <h3 className="service-title">{service.title}</h3>
             <p className="service-description">{service.description}</p>
           </div>
         ))}
       </div>
-    </div>   
+    </div>
     );
     }
