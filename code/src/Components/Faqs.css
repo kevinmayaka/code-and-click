@@ -5,7 +5,14 @@
   font-family: Arial, Helvetica, sans-serif;
   padding: 20px;
 }
-
+.FAQs-Component h2 {
+  text-align: center;
+  font-size: 30px;
+  margin-bottom: 20px;
+  margin-top: 30px;
+  color: #111;
+  font-family: Arial, Helvetica, sans-serif;
+}
 .faq-item {
   border-bottom: 1px solid #ddd;
   padding: 12px 0;
@@ -14,6 +21,9 @@
 .faq-question {
   display: flex;
   justify-content: space-between;
+  text-align: left;
+  font-family: Arial, Helvetica, sans-serif;
+  font: 1em sans-serif;
   align-items: center;
   cursor: pointer;
 }
@@ -38,6 +48,11 @@
   transition: max-height 0.35s ease, opacity 0.25s ease;
   opacity: 0;
   color: #222;
+  font-family: Arial, Helvetica, sans-serif;
+  text-align: left;
+  font-size: 1em;
+  margin-top: 10px;
+  line-height: 1.6;
 }
 
 .faq-answer.open {
