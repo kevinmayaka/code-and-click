@@ -1,5 +1,6 @@
 import React from "react";
 import "./Footer.css";
+import logo from '../assets/cnclogo.jpg';
 
 export default function Footer() {
     return (
@@ -8,7 +9,7 @@ export default function Footer() {
                 {/* Logo Section */}
                 <div className="logo-section">
                     <img
-                        src="https://codetheweb.blog/assets/img/icon2.png"
+                        src= {logo}
                         alt="Code and Click Africa Logo"                        
                     />
                     <h3>Code and Click Africa</h3>
@@ -42,7 +43,7 @@ export default function Footer() {
                             <strong>Email:</strong> info@codeandclick.africa
                         </p>
                         <p>
-                            <strong>Phone:</strong> +254 123 456 789
+                            <strong>Phone:</strong> +254 797 911 930
                         </p>
                         <p>
                             <strong>Address:</strong> Nairobi, Kenya
