@@ -1,91 +1,24 @@
-import React, {useState} from 'react';
+import React from 'react';
 import './ContactUs.css';
 
 export default function ContactUs() {
 
-    const [isFormVisible, setIsFormVisible] = useState(false);
-    const [formData, setFormData] = useState({
-        name: '',
-        email: '',
-        message: ''
-    });
-    // handler to toggle form visibility
+    // handler to open Calendly in a new page
     const handleButtonClick = () => {
-        setIsFormVisible(!isFormVisible);
+        window.open('https://calendly.com/kevinabuga3', '_blank');
     };
-    const handleCloseForm = () => {
-        setIsFormVisible(false);
-    }
-    // handler to update form data
-    const handleInputChange =(e) => {
-        const {name, value} =e.target;
-        setFormData((prevData) => ({
-            ...prevData,
-            [name]: value
-        }));
-    }
-    // handler for submit button inside the form 
-    const handleSubmit = (e) => {
-        e.preventDefault();
-        alert(`Thank you ${formData.name}. Your response has been recorded`);
-        setFormData({name: "", email: "", message: ""});
-        setIsFormVisible(false);
-    }
+
     return (
-         <div className="contact-us-container" id="contact">
+        <div className="contact-us-container" id="contact">
             <h1 className='contact-us-header'>Contact Us</h1>
             <div className="contact-us-content">
                 <div className='contact-us-tagline'>
-                <p>Want more customers, Clients and Sales than you 
-                    could handle? Reach out to us today!
-                </p> 
+                    <p>Want more customers, Clients and Sales than you 
+                        could handle? Reach out to us today!
+                    </p> 
                 </div>       
-                <button className="contact-us-button" onClick={handleButtonClick}>Get in Touch</button>                
-            </div>
-            {isFormVisible &&(
-                    <div className='modal-overlay' onClick={handleCloseForm}>
-                        <div className='form-container' onClick={(e) => e.stopPropagation()}>
-                            <button className='close-btn' onClick={handleCloseForm}>X</button>                        
-                        <h2>Tell us about your business</h2>
-                        <form onSubmit={handleSubmit}>
-                            <div>
-                                <label>
-                                    Username:
-                                    <input
-                                    type='text'
-                                    name='name'
-                                    value={formData.name}
-                                    onChange={handleInputChange} 
-                                    />
-                                </label>
-                            </div>
-                            <div>
-                                <label>
-                                    Email:
-                                    <input
-                                    type='email'
-                                    name='email'
-                                    value={formData.email}
-                                    onChange={handleInputChange} 
-                                    />                                    
-                                </label>
-                            </div>
-                            <div>
-                                <label>
-                                    Message:
-                                    <input
-                                    type='text'
-                                    name='message'
-                                    value={formData.message}
-                                    onChange={handleInputChange} 
-                                    />                                    
-                                </label>
-                            </div>
-                            <button type='submit'>Submit Data</button>
-                        </form>
-                    </div>
-                </div>
-                )}            
-         </div>   
+                <button className="contact-us-button" onClick={handleButtonClick}>Book a Meeting</button>                
+            </div>          
+        </div>   
     );
- }
+}
