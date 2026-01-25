@@ -2,16 +2,16 @@
 footer {
     background-color: #182C55;
     color: white;
-    padding: 40px 0 20px 0;
+    padding: 50px 0 30px 0;
     font-family: 'Arial', sans-serif;
+    margin-top: 60px;
 }
 
 .footer {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-    gap: 30px;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 40px;
     max-width: 1200px;
-    max-height: 200px;
     margin: 0 auto;
     padding: 0 20px;
 }
@@ -19,39 +19,51 @@ footer {
 /* Logo Section */
 .logo-section {
     text-align: center;
-    padding: 0 20px;
+    padding: 0 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
 }
 
 .logo-section img {
-    width: 80px;
-    height: 80px;
+    width: 100px;
+    height: 100px;
     margin-bottom: 15px;
     border-radius: 50%;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    object-fit: cover;
 }
 
 .logo-section h3 {
     margin: 0 0 10px 0;
-    font-size: 1.4em;
+    font-size: 1.3em;
     font-weight: bold;
     color: #61dafb;
+    line-height: 1.3;
 }
 
 .logo-section p {
     margin: 0;
-    font-size: 0.95em;
+    font-size: 0.9em;
     color: #cccccc;
-    line-height: 1.4;
+    line-height: 1.5;
+    max-width: 200px;
 }
 
 /* Solutions Section */
+.solutions-section {
+    padding: 0 10px;
+}
+
 .solutions-section h4 {
-    margin-bottom: 20px;
-    font-size: 1.2em;
+    margin: 0 0 20px 0;
+    font-size: 1.1em;
     font-weight: bold;
     color: #61dafb;
     border-bottom: 2px solid #61dafb;
-    padding-bottom: 8px;
+    padding-bottom: 10px;
+    text-align: center;
 }
 
 .solutions-section ul {
@@ -62,38 +74,45 @@ footer {
 
 .solutions-section li {
     margin-bottom: 12px;
+    text-align: center;
 }
 
 .solutions-section a {
     color: #ffffff;
     text-decoration: none;
-    font-size: 1em;
+    font-size: 0.95em;
     transition: color 0.3s ease;
     display: inline-block;
+    padding: 5px 0;
 }
 
 .solutions-section a:hover {
     color: #61dafb;
-    transform: translateX(5px);
 }
 
 /* Contact Information Section */
+.contact-info-section {
+    padding: 0 10px;
+}
+
 .contact-info-section h4 {
-    margin-bottom: 20px;
-    font-size: 1.2em;
+    margin: 0 0 20px 0;
+    font-size: 1.1em;
     font-weight: bold;
     color: #61dafb;
     border-bottom: 2px solid #61dafb;
-    padding-bottom: 8px;
+    padding-bottom: 10px;
+    text-align: center;
 }
 
 .contact-info-content {
-    font-size: 0.95em;
+    font-size: 0.9em;
+    text-align: center;
 }
 
 .contact-info-content p {
-    margin: 8px 0;
-    line-height: 1.5;
+    margin: 12px 0;
+    line-height: 1.6;
 }
 
 .contact-info-content strong {
@@ -104,8 +123,8 @@ footer {
 /* Copyright Section */
 .copyright-section {
     text-align: center;
-    margin-top: 30px;
-    padding-top: 20px;
+    margin-top: 40px;
+    padding-top: 25px;
     border-top: 1px solid #444444;
     font-size: 0.85em;
     color: #aaaaaa;
@@ -122,38 +141,101 @@ footer {
 
 /* Responsive Design */
 @media (max-width: 768px) {
+    footer {
+        padding: 40px 0 25px 0;
+    }
+
+    .footer {
+        grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+        gap: 30px;
+        padding: 0 15px;
+    }
+
+    .logo-section {
+        grid-column: 1 / -1;
+    }
+
+    .solutions-section h4,
+    .contact-info-section h4 {
+        font-size: 1em;
+    }
+
+    .solutions-section a {
+        font-size: 0.9em;
+    }
+
+    .contact-info-content {
+        font-size: 0.85em;
+    }
+
+    .contact-info-content p {
+        margin: 10px 0;
+    }
+
+    .copyright-section {
+        margin-top: 30px;
+        padding-top: 20px;
+        font-size: 0.8em;
+    }
+}
+
+@media (max-width: 480px) {
+    footer {
+        padding: 30px 0 20px 0;
+        margin-top: 40px;
+    }
+
     .footer {
         grid-template-columns: 1fr;
         gap: 25px;
         padding: 0 15px;
     }
 
-    .logo-section,
-    .solutions-section,
-    .contact-info-section {
-        text-align: center;
-    }
-
-    .solutions-section a:hover {
-        transform: none;
-    }
-}
-
-@media (max-width: 480px) {
-    footer {
-        padding: 30px 0 15px 0;
-    }
-
-    .footer {
-        gap: 20px;
+    .logo-section {
+        grid-column: auto;
     }
 
     .logo-section img {
-        width: 60px;
-        height: 60px;
+        width: 80px;
+        height: 80px;
+        margin-bottom: 12px;
     }
 
     .logo-section h3 {
-        font-size: 1.2em;
+        font-size: 1.1em;
+        margin-bottom: 8px;
+    }
+
+    .logo-section p {
+        font-size: 0.85em;
+    }
+
+    .solutions-section h4,
+    .contact-info-section h4 {
+        font-size: 0.95em;
+        margin-bottom: 15px;
+        padding-bottom: 8px;
+    }
+
+    .solutions-section li {
+        margin-bottom: 10px;
+    }
+
+    .solutions-section a {
+        font-size: 0.85em;
+    }
+
+    .contact-info-content {
+        font-size: 0.8em;
+    }
+
+    .contact-info-content p {
+        margin: 8px 0;
+    }
+
+    .copyright-section {
+        margin-top: 25px;
+        padding-top: 15px;
+        font-size: 0.75em;
     }
 }
